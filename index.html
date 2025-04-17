@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Matt Gueiros – Trusted cybersecurity advisor with 17+ years of global experience in pre-sales, secure mobility, and enterprise enablement." />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matt Gueiros | Trilingual Technical Consultant</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
       color: #333;
     }
     header {
+      position: relative;
       background: #0f172a;
       color: white;
       padding: 3rem 2rem;
@@ -118,14 +121,29 @@
         font-size: 0.95rem;
       }
     }
+      header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      z-index: 0;
+    }
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+    .cta:hover {
+      background: #1e293b;
+      transition: 0.3s ease;
+    }
   </style>
 </head>
 <body>
   <header style="background: url('banner.png') center center / cover no-repeat; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem 1rem;">
     <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
       <div style="text-align: left;">
-        <h1>Trusted Cybersecurity Advisor | Empowering Global Tech Growth</h1>
-    <p>Enterprise Security | Channel Enablement | Proven Experience Across the Americas</p>
+        <h1>Trusted Cybersecurity Advisor<br/>Empowering Global Tech Growth</h1>
+    <p>Enterprise Security | Trilingual Enablement | 17+ Years Supporting Global Teams</p>
     </div>
     </div>
     <a href="#contact" class="cta">Book a Call</a>
