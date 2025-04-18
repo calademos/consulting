@@ -147,6 +147,28 @@
       background: #1e293b;
       transition: 0.3s ease;
     }
+    /* Certifications Section Styles */
+.certifications-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Adjust spacing as needed */
+  padding: 1rem 0;
+}
+
+.certifications-container img {
+  max-width: 120px; /* Adjust to preferred size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certifications-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
   </style>
 </head>
 <body>
@@ -166,9 +188,12 @@
   <p>Trilingual in English, Spanish, and Portuguese, I specialize in secure mobility, pre-sales strategy, and enterprise-grade deployments. My work empowers teams to reduce risk, improve compliance, and accelerate time-to-value through practical, scalable solutions.</p>
 </section>
 <section>
+<section class="certifications">
   <h2>Certifications</h2>
-  <img src="BCSA.jpeg" alt="BlackBerry Cybersecurity Administrator Certification" style="max-width: 50px; margin-bottom: 1rem; border-radius: 8px;">
-  <img src="MattGueiros-BSIP.png" alt="BlackBerry Systems Integration Professional Certification" style="max-width: 50px; border-radius: 8px;">
+  <div class="certifications-container">
+    <img src="BCSA.jpeg" alt="BlackBerry Cybersecurity Administrator Certification">
+    <img src="MattGueiros-BSIP.png" alt="BlackBerry Systems Integration Professional Certification">
+  </div>
 </section>
   <section>
   <h2>Core Services</h2>
