@@ -7,10 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matt Gueiros | Secure Mobility & Cybersecurity Consulting</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
   <!-- Lightbox2 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-
+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css\" rel=\"stylesheet\">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -19,17 +17,12 @@
       padding: 0;
       color: #333;
     }
-    .main-header {
-      background: url('banner.png') center center / cover no-repeat;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 1rem;
+    header {
       position: relative;
+      background: #0f172a;
       color: white;
+      padding: 3rem 2rem;
+      text-align: center;
     }
     header h1 {
       font-size: 2rem;
@@ -54,41 +47,51 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
-    .cta {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: all 0.3s ease;
+    ul {
+      padding-left: 1.25rem;
     }
-    .cta:hover {
-      background: linear-gradient(135deg, #2563eb, #1e3a8a);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    li {
+      margin-bottom: 0.5rem;
     }
-    .certifications-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      padding: 1rem 0;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
-    .certifications-container img {
-      max-width: 120px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    th, td {
+      text-align: left;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
     }
-    .certifications-container img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    th {
+      background: #f1f5f9;
     }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      padding: 2rem 1rem;
+    }
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
     form {
       display: flex;
       flex-direction: column;
@@ -106,51 +109,190 @@
       color: white;
       cursor: pointer;
     }
-    @media (max-width: 768px) {
-      header h1 { font-size: 1.25rem; }
-      header p { font-size: 0.9rem; }
-      section { padding: 1.5rem 1rem; margin-top: 1.5rem; }
+    .hidden {
+      display: none;
     }
+      @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.25rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 1.5rem 1rem;
+        margin-top: 1.5rem;
+      }
+      table, th, td {
+        font-size: 0.9rem;
+      }
+      .cta {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+      }
+      input, select, textarea, button {
+        font-size: 0.95rem;
+      }
+    }
+      header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      z-index: 0;
+    }
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+    /* Add this cleaner header style */
+.main-header {
+  background: url('banner.png') center center / cover no-repeat;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  color: white;
+}
+        /* Certifications Section Styles */
+.certifications-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Adjust spacing as needed */
+  padding: 1rem 0;
+}
+
+.certifications-container img {
+  max-width: 120px; /* Adjust to preferred size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certifications-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
   </style>
 </head>
 <body>
-  <header class="main-header">
-    <h1>Trusted Cybersecurity Advisor<br/>Empowering Global Tech Growth</h1>
+  <header style="background: url('banner.png') center center / cover no-repeat; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem 1rem;">
+    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="text-align: left;">
+        <h1>Trusted Cybersecurity Advisor<br/>Empowering Global Tech Growth</h1>
     <p>Enterprise Security | Proven Experience Across the Americas</p>
+    </div>
+    </div>
     <a href="#contact" class="cta">Book a Call</a>
   </header>
 
   <section>
-    <h2>About Me</h2>
-    <p>I'm Matt Gueiros, a cybersecurity advisor with 17+ years of experience...</p>
+  <h2>About Me</h2>
+  <p>I'm Matt Gueiros, a cybersecurity advisor with 17+ years helping organizations secure their communications, endpoints, personnel, and mobility infrastructure. I’ve led technical sales and partner enablement across the U.S., LATAM, and the Caribbean — most recently as Principal Sales Engineer at BlackBerry.</p>
+  <p>Trilingual in English, Spanish, and Portuguese, I specialize in secure mobility, pre-sales strategy, and enterprise-grade deployments. My work empowers teams to reduce risk, improve compliance, and accelerate time-to-value through practical, scalable solutions.</p>
+</section>
+
+<section class="certifications">
+  <h2>Certifications</h2>
+<div class="certifications-container">
+  <a href="BCSA.jpeg" data-lightbox="certifications" data-title="BlackBerry Cybersecurity Administrator Certification">
+    <img src="BCSA.jpeg" alt="BlackBerry Cybersecurity Administrator Certification">
+  </a>
+  <a href="MattGueiros-BSIP.png" data-lightbox="certifications" data-title="BlackBerry Systems Integration Professional Certification">
+    <img src="MattGueiros-BSIP.png" alt="BlackBerry Systems Integration Professional Certification">
+  </a>
+</div>
+
+</section>
+
+  <section>
+  <h2>Core Services</h2>
+  <ul>
+    <li>Proof of Concept Execution & Technical Validation</li>
+    <li>Solution Design & Rollout Strategy</li>
+    <li>Channel Sales Support & Regional Go-to-Market Advisory</li>
+    <li>Security Workshops, Briefings & Compliance Readiness</li>
+    <li>Localization for Spanish & Portuguese-Speaking Markets</li>
+    <li>Pre-Sales & RFP/Proposal Technical Strategy</li>
+    <li>Hands-on Training (English, Spanish & Portuguese)</li>
+    <li>Technical Triage & Post-Sales Optimization</li>
+    <li>Partner Enablement & Field-Level Activation</li>
+    <li>Executive Reporting & Strategic Insight Briefs</li>
+  </ul>
+</section>
+
+  <section>
+    <h2>Project Objectives</h2>
+    <ul>
+      <li>Identify LATAM engagement gaps</li>
+      <li>Deliver multilingual enablement sessions</li>
+      <li>Support region-specific POC execution</li>
+      <li>Build trust and accelerate time-to-value</li>
+      <li>Strengthen post-sales experience</li>
+      <li>Provide actionable insights to global teams</li>
+    </ul>
   </section>
 
-  <section class="certifications">
-    <h2>Certifications</h2>
-    <div class="certifications-container">
-      <a href="BCSA.jpeg" data-lightbox="certifications" data-title="BlackBerry Cybersecurity Administrator">
-        <img src="BCSA.jpeg" alt="Certification">
-      </a>
-      <a href="MattGueiros-BSIP.png" data-lightbox="certifications" data-title="BlackBerry Systems Integration Professional">
-        <img src="MattGueiros-BSIP.png" alt="Certification">
-      </a>
-    </div>
+  <section>
+    <h2>Key Deliverables</h2>
+    <ul>
+      <li><strong>Audit Report:</strong> LATAM engagement analysis and recommendations</li>
+      <li><strong>Live/Recorded Training:</strong> Sessions in Spanish & Portuguese</li>
+      <li><strong>POC Support:</strong> Setup, execution, and optimization</li>
+      <li><strong>Field Feedback:</strong> Insight summaries and partner reports</li>
+      <li><strong>Technical Triage:</strong> Remote troubleshooting logs</li>
+      <li><strong>Executive Brief:</strong> Strategic LATAM engagement findings</li>
+    </ul>
   </section>
 
-  <!-- More sections here... -->
+  <section>
+    <h2>Service Packages and Rates</h2>
+    <table>
+      <tr><th>SKU</th><th>Description</th><th>Rate</th></tr>
+      <tr><td>CONS-LATAM-POC01-V1</td><td>POC Deployment & Support (20 hrs)</td><td>$1,200 flat</td></tr>
+      <tr><td>CONS-LATAM-TRAIN01-V1</td><td>2-hr Technical Training Session</td><td>$150/session</td></tr>
+      <tr><td>CONS-LATAM-RETAINER-V1</td><td>Monthly Consulting (10 hrs)</td><td>$600/month</td></tr>
+      <tr><td>CONS-US-ADHOC-V1</td><td>On-Demand Consulting (Hourly)</td><td>$65/hr</td></tr>
+      <tr><td>CONS-LATAM-SECBRIEF-V1</td><td>Security Briefing/Demo</td><td>$300/session</td></tr>
+      <tr><td>CONS-LATAM-TRIAGE-V1</td><td>Post-Sales Triage Support</td><td>$75/hr</td></tr>
+    </table>
+    <section>
+  <h2>Download Service Packages</h2>
+  <p>You can download a branded PDF version of my consulting service offerings below:</p>
+  <a href="Matt_Gueiros_Service_Packages.pdf" class="cta" download>📄 Download PDF</a>
+</section>
+  </section>
 
   <section id="contact">
     <h2>Contact Matt</h2>
     <form action="https://formspree.io/f/meoaboez" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="_subject" placeholder="Subject (e.g. Request for Proposal)" required />
+      <select name="interest" required>
+        <option value="" disabled selected>Select a Service of Interest</option>
+        <option value="POC Support">POC Support</option>
+        <option value="Training">Training</option>
+        <option value="Consulting Retainer">Consulting Retainer</option>
+        <option value="Post-Sales Support">Post-Sales Support</option>
+        <option value="Other">Other</option>
+      </select>
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="text" name="_gotcha" class="hidden" />
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
+  <footer>
+    <p><em>This is a sample consulting proposal and subject to change based on client scope and needs.</em></p>
+    <p>&copy; 2025 Matt Gueiros | <a href="https://www.reinaux.com" target="_blank">www.reinaux.com</a> | <a href="https://www.linkedin.com/in/mattgueiros" target="_blank">LinkedIn</a></p>
+  </footer>
 </body>
 </html>
